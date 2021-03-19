@@ -1,0 +1,535 @@
+<codebook>
+  <studyTitle>NC Sentencing Data Codebook: Felonies</studyTitle>
+  <summary>
+    <lin>Project contact person: Will Crozier, wec5026@gmail.com</lin>
+    <lin>Project description: NC Sentencing Data for felonies</lin>
+  </summary>
+  <var>
+    <name>CHRGCODE</name>
+    <format>numeric</format>
+    <varLabel>charged offense code</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CONVCODE</name>
+    <format>numeric</format>
+    <varLabel>convicted offense code</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CHRG99</name>
+    <format>numeric</format>
+    <varLabel>last 2 digits of charged offense code</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CONV99</name>
+    <format>numeric</format>
+    <varLabel>last 2 digits of convicted offense code</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>OFFDATE</name>
+    <format>character</format>
+    <varLabel>charged offense date</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>PLEA</name>
+    <format>character</format>
+    <varLabel>plea</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>VERDICT</name>
+    <format>character</format>
+    <varLabel>verdict</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>MODISP</name>
+    <format>character</format>
+    <varLabel>method of disposition</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>SENTDATE</name>
+    <format>character</format>
+    <varLabel>sentence date</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>COUNTY</name>
+    <format>character</format>
+    <varLabel>county</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>DOB</name>
+    <format>character</format>
+    <varLabel>date of birth</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>SERVDATE</name>
+    <format>character</format>
+    <varLabel>service date of warrant</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CONVTEXT2</name>
+    <format>character</format>
+    <varLabel>convicted offense code + text (99 codes)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CHRGTEXT</name>
+    <format>character</format>
+    <varLabel>charged offense code + text</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CONVTEXT</name>
+    <format>character</format>
+    <varLabel>convicted offense code + text</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CHRG_GS</name>
+    <format>character</format>
+    <varLabel>g.s. number for charged offense</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>CONV_GS</name>
+    <format>character</format>
+    <varLabel>g.s. number for convicted offense</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>ssa</name>
+    <format>numeric</format>
+    <varLabel>ssa flag (1=ssa)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>aic</name>
+    <format>numeric</format>
+    <varLabel>punishment type</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>aoc_chrg</name>
+    <format>numeric</format>
+    <varLabel>charged offense class (aoc codes)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>aoc_conv</name>
+    <format>numeric</format>
+    <varLabel>convicted offense class (aoc codes)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>convclass</name>
+    <format>numeric</format>
+    <varLabel>convicted offense class (clerk)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>priorrec</name>
+    <format>numeric</format>
+    <varLabel>prior record points</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>chrgtype</name>
+    <format>numeric</format>
+    <varLabel>charged offense type (1=F,2=M,3=T,4=I)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>convtype</name>
+    <format>numeric</format>
+    <varLabel>convicted offense type (1=F,2=M,3=T,4=I)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>asrflag</name>
+    <format>numeric</format>
+    <varLabel>advanced supervised release flag (on record of m.s. conviction)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>min</name>
+    <format>numeric</format>
+    <varLabel>minimum sentence length (months)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>max</name>
+    <format>numeric</format>
+    <varLabel>maximum sentence length</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>atty</name>
+    <format>character</format>
+    <varLabel>attorney type (superior, filled with district)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>gender</name>
+    <format>character</format>
+    <varLabel>gender</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>race</name>
+    <format>character</format>
+    <varLabel>race</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>vhf</name>
+    <format>numeric</format>
+    <varLabel>violent habitual felon (conviction) (10=vhf underlies a class a conviction)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>hf</name>
+    <format>numeric</format>
+    <varLabel>habitual felon (conviction)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>hfbe</name>
+    <format>numeric</format>
+    <varLabel>habitual breaking and entering felon (conviction)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>armedhf</name>
+    <format>numeric</format>
+    <varLabel>armed habitual felon (conviction)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>ms_hsoclass</name>
+    <format>numeric</format>
+    <varLabel>vhf/hf/hfbe/armedhf only: vhf=11/life, hf=c,d,e, hfbe=e, armedhf=c</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>u_convcode</name>
+    <format>numeric</format>
+    <varLabel>vhf/hf/hfbe/armedhf only: most serious underlying conviction offense code</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>u_convtext</name>
+    <format>character</format>
+    <varLabel>vhf/hf/hfbe/armedhf only: most serious underlying conviction offense text</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>u_aocconv</name>
+    <format>numeric</format>
+    <varLabel>vhf/hf/hfbe/armedhf only: most serious underlying conviction class (aoc codes)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>u_convclass</name>
+    <format>numeric</format>
+    <varLabel>vhf/hf/hfbe/armedhf only: most serious underlying conviction class (clerk)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>hf_jraclass</name>
+    <format>numeric</format>
+    <varLabel>hf only: offense class for hf based on hso_jradate and class of underlying offense</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_asrflag</name>
+    <format>numeric</format>
+    <varLabel>advanced supervised release flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_cmsvcflag</name>
+    <format>numeric</format>
+    <varLabel>community service flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_ctcostflag</name>
+    <format>numeric</format>
+    <varLabel>court cost flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_ctmsrvd</name>
+    <format>numeric</format>
+    <varLabel>credit for time served</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_ctsflag</name>
+    <format>numeric</format>
+    <varLabel>credit for time served flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_dtcflag</name>
+    <format>numeric</format>
+    <varLabel>drug treatment court flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_ehaflag</name>
+    <format>numeric</format>
+    <varLabel>house arrest w/electronic monitoring flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_fineflag</name>
+    <format>numeric</format>
+    <varLabel>fine flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_gunflag</name>
+    <format>numeric</format>
+    <varLabel>firearm enhancement flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_probtime</name>
+    <format>numeric</format>
+    <varLabel>probation length (months)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_restflag</name>
+    <format>numeric</format>
+    <varLabel>restitution flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_spfacil</name>
+    <format>numeric</format>
+    <varLabel>special probation incarceration location</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_sexoffcond</name>
+    <format>numeric</format>
+    <varLabel>comply w/ conditions for sex offenders</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_spflag</name>
+    <format>numeric</format>
+    <varLabel>special probation flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>_supvprob</name>
+    <format>numeric</format>
+    <varLabel>supervised probation</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>casemos</name>
+    <format>numeric</format>
+    <varLabel>case months from service to disposition</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>servsas</name>
+    <format>Date</format>
+    <varLabel>service date of the most serious offense (sas date)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>age</name>
+    <format>numeric</format>
+    <varLabel>age at conviction</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>age_offense</name>
+    <format>numeric</format>
+    <varLabel>age at offense</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>jra</name>
+    <format>numeric</format>
+    <varLabel>1=jra (offdate ge 12/1/2011) 0=pre-jra (offdate lt 12/1/2011)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>senmonth</name>
+    <format>numeric</format>
+    <varLabel>month of sentencing</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>offsas</name>
+    <format>Date</format>
+    <varLabel>offense date (sas date)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>dobsas</name>
+    <format>Date</format>
+    <varLabel>date of birth (sas date)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>district</name>
+    <format>numeric</format>
+    <varLabel>current judicial district (as of fy1819)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>division</name>
+    <format>numeric</format>
+    <varLabel>current judicial division (as of fy1819)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>court</name>
+    <format>numeric</format>
+    <varLabel>1=superior, 1.5=h&amp;i fel in district, 2=district (default value=1)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>life</name>
+    <format>numeric</format>
+    <varLabel>life (without parole) sentence flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>lifepar_lt18</name>
+    <format>numeric</format>
+    <varLabel>life with parole sentence flag (def. lt 18 at offense)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>death</name>
+    <format>numeric</format>
+    <varLabel>death sentence flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>prl</name>
+    <format>numeric</format>
+    <varLabel>prior record level</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>drugtraff</name>
+    <format>numeric</format>
+    <varLabel>drug trafficking flag</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>mit</name>
+    <format>numeric</format>
+    <varLabel>lowest min of the mitigated range by cell (12/1/09 grid)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>pres1</name>
+    <format>numeric</format>
+    <varLabel>lowest min of the presumptive range by cell (12/1/09 grid)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>pres2</name>
+    <format>numeric</format>
+    <varLabel>highest min of the presumptive range by cell (12/1/09 grid)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>agg</name>
+    <format>numeric</format>
+    <varLabel>highest min of the aggravated range by cell (12/1/09 grid)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>midpoint</name>
+    <format>numeric</format>
+    <varLabel>midpoint of the presumptive range by cell (12/1/09 grid)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>asr80</name>
+    <format>numeric</format>
+    <varLabel>80% of lowest mitigated sentence for asr-eligible cells (beginning 1/1/12)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>good</name>
+    <format>numeric</format>
+    <varLabel>1=good conviction, 0=bad conviction</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>range</name>
+    <format>numeric</format>
+    <varLabel>sentencing range</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>newdisp</name>
+    <format>numeric</format>
+    <varLabel>mode of disposition: 1=guilty plea, 2=bench trial, 3=jury trial</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>convcat</name>
+    <format>numeric</format>
+    <varLabel>more specific crime categories (convcode)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>crimetype</name>
+    <format>numeric</format>
+    <varLabel>1=person, 2=property, 3=drug, 4=other (convcode)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>FY</name>
+    <format>character</format>
+    <varLabel>fiscal year of reported data</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>ssagrid</name>
+    <format>numeric</format>
+    <varLabel>ssa grid of min sentences (0=LT 10/1/94, 1=12/1/94-11/30/09, 2=GE 12/1/09)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>sentsas</name>
+    <format>Date</format>
+    <varLabel>sentence date of the most serious offense (sas date)</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>division_orig</name>
+    <format>numeric</format>
+    <varLabel>judicial division at time of conviction</varLabel>
+    <codes/>
+  </var>
+  <var>
+    <name>district_orig</name>
+    <format>numeric</format>
+    <varLabel>judicial district at time of conviction</varLabel>
+    <codes/>
+  </var>
+</codebook>

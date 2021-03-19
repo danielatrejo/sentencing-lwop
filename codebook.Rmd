@@ -1,0 +1,27 @@
+---
+title: "charges-codebook"
+author: "Dani Trejo"
+date: "3/19/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+#charge_text<-select(hxfel9919_request,CHRGTEXT)
+
+#typeof(charge_text$CHRGTEXT)
+#type
+
+#separated<- charge_text$ %>% 
+             # separate(CHRGTEXT, " ")
+
+#charge_text %>% 
+  #mutate(separated= str_split(CHRGTEXT, " " , n=1))
+         #code= select()
+```
+
