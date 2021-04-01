@@ -26,24 +26,70 @@ varForm <- lapply(hxfel9919_request, class)
 valLabs <- lapply(hxfel9919_request, attr, "labels")
 ```
 
+##Building the Codebook XML tree
+```{r level-1}
+# Code values
+vval <- lapply(valLabs, function(x){
+  lapply(x, function(x) newXMLNode(name="val",x))
+} )
+# Value labels
+# Pull label strings
+varValLabs <- lapply(valLabs, attr, "names")
+vvlabs <- lapply(varValLabs, function(x){
+  lapply(x, function(x) newXMLNode(name="codeLabel",x))
+})
+# Check Source example
+vval[["Source"]]
+vvlabs[["Source"]]
+```
+```{r level-2}
+# Add pair as a parent to the values
+pairs <- lapply(vval, function(x){
+  lapply(x, function(x) newXMLNode(name="pair", .children=list(x)))
+}) 
+# Add labels as a child to pairs
+for(i in 1:length(pairs)){
+  if (length(pairs[[i]]) > 0){ # otherwise hangs for vars with no value/label pairs
+    for(j in 1:length(pairs[[i]])){
+    addChildren(pairs[[i]][[j]], kids=list(vvlabs[[i]][[j]]))
+      }
+  }
+}
+# Check Source example
+pairs[["Source"]]
+```
+```{r level-3}
+# Add value label pairs to parents called "codes"
+vcodes <- lapply(pairs, function(x) 
+  newXMLNode(name="codes", .children=list(x))
+  )
 
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+# Pull variable names, formats, formats, and labels
+vnames <- lapply(varNames, function(x) newXMLNode(name="name",x))
+vform <- lapply(varForm, function(x) newXMLNode(name="format",x))
+vlabs <- lapply(varLabs, function(x) newXMLNode(name="varLabel",x))
 ```
 
-## Including Plots
+```{r level-4}
+# Add vnames,vform, vlabs, and codes to parents called "var"
+vars <- mapply(function(w,x,y,z) 
+  newXMLNode(name="var", .children=list(w,x,y,z)), 
+  vnames,vform,vlabs,vcodes)
+# Check Source example
+vars[["Source"]]
 
-You can also embed plots, for example:
+# Title
+cTitle <- newXMLNode(name="studyTitle", "NC Sentencing Data Codebook: Felonies")
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+# Summary
+cSum <- newXMLNode(name="summary", 
+                   newXMLNode(name="lin", "Project contact person: Will Crozier, wec5026@gmail.com"),
+                   newXMLNode(name="lin", "Project description: NC Sentencing Data for felonies"))
+cSum
+```
+```{r top-level}
+# Add vars to main codebook node
+cb <- newXMLNode(name="codebook", .children=list(cTitle, cSum, vars))
+saveXML(cb, file="ncSentencingDataCodebook.xml", encoding="UTF-8")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

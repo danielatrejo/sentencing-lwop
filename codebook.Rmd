@@ -6,22 +6,29 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+#ONLY DO THIS ONCE 
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(dplyr)
+charge_text<-select(hxfel9919_request,CHRGTEXT)
 ```
 
 ```{r}
-#charge_text<-select(hxfel9919_request,CHRGTEXT)
 
-#typeof(charge_text$CHRGTEXT)
-#type
 
-#separated<- charge_text$ %>% 
-             # separate(CHRGTEXT, " ")
+typeof(charge_text$CHRGTEXT)
 
-#charge_text %>% 
-  #mutate(separated= str_split(CHRGTEXT, " " , n=1))
-         #code= select()
+
+separated<- charge_text %>%
+              mutate(code = as.integer(substring(CHRGTEXT,1,4)),
+                     explanation = substring(CHRGTEXT,6,length(CHRGTEXT)))
+glimpse(separated)
+```
+
+```{r}
+separated %>% 
+  group_by(code) %>% 
+  count()
+  
 ```
 
