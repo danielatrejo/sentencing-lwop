@@ -9,14 +9,20 @@ output: html_document
 #ONLY DO THIS ONCE 
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(haven)
 library(dplyr)
-charge_text<-select(hxfel9919_request,CHRGTEXT)
+
 ```
 
 ```{r}
+hxfel<- read_sas("Data/hxfel9919_request.sas7bdat")
+charge_text<-select(hxfel,CHRGTEXT)
+```
 
+```{r}
+#exists("hxfel9919_request")
 
-typeof(charge_text$CHRGTEXT)
+#typeof(charge_text$CHRGTEXT)
 
 
 separated<- charge_text %>%
