@@ -36,5 +36,50 @@ separated %>%
   group_by(code) %>% 
   count()
   
+separated %>% 
+  group_by(code,explanation) %>% 
+  count()
+```
+
+```{r}
+categorizeFel <- function(df, searchColName, searchList, catList, newColName="Category") {
+  catDF <- data.frame(matrix(ncol=ncol(df), nrow=0))
+  colnames(catDF) <- paste0(names(df))
+  df$sequence <- seq(nrow(df))
+  for (i in seq_along(searchList)) {
+    rownames(df) <- NULL
+    index <- grep(searchList[i], df[,which(colnames(df) == searchColName)], ignore.case=TRUE)
+    tempDF <- df[index,]
+    tempDF$newCol <- catList[i]
+    catDF <- rbind(catDF, tempDF)
+    df <- df[-index,]
+  }
+  if (nrow(df) > 0) {
+    df$newCol <- "OTHER"
+    catDF <- rbind(catDF, df)
+  }
+  catDF <- catDF[order(catDF$sequence),]
+  catDF$sequence <- NULL
+  rownames(catDF) <- NULL
+  catDF$newCol <- as.factor(catDF$newCol)
+  colnames(catDF)[which(colnames(catDF) == "newCol")] <- newColName
+  catDF
+}
+
+search <- c("MURDER", "AWDW", "MANSLAUGHTER", "LARCE")
+
+categories <- c("Person", "Person", "Person", "Property")
+```
+
+```{r}
+sep<- as.data.frame(separated)
+#categorizeFel(sep, separated$explanation, search, categories)
+
+
+```
+
+```{r}
+#separated %>% 
+#select(explanation)
 ```
 
